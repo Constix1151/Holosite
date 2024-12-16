@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holokaan</title>
+  
+  <link rel="icon" type="image/x-icon" href="img/77_herz_holokaan_0.png">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+<link rel="stylesheet" href="css_bildschirm.css">
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<link rel="stylesheet" href="stil.css">
+<script src="bildschirm.js"></script>
+</head>
+<body>
+  
+  <!-- Uses a transparent header that draws on top of the layout's background -->
+<style>
+  .demo-layout-transparent {
+    background: url('../assets/demos/transparent.jpg') center / cover;
+  }
+  .demo-layout-transparent .mdl-layout__header,
+  .demo-layout-transparent .mdl-layout__drawer-button {
+    /* This background is dark, so we set text to white. Use 87% black instead if
+       your background is light. */
+    color: white;
+  }
+
+  .Video-Background {
+    object-fit: cover;
+    position: absolute;
+  }
+
+.YT-LOGO {
+  width: 40px;
+  height: 30px;
+  margin-right: 10px;
+  margin-left: 40px;
+  text-decoration: none;
+  color: black;
+}
+
+.INSTAGRAM-LOGO {
+  width:75px;
+  height:75px;
+  margin-left:10px;
+  text-decoration: none;
+  color: black;
+}
+
+.INSTAGRAM-LOGO:hover {
+  text-decoration: underline;
+  color:gold;
+}
+
+.YT-LOGO:hover {
+  text-decoration: underline;
+  color:gold;
+}
+
+
+.CONSTIX-LOGO {
+  width:50px;
+  height:50px;
+  border-radius: 20px;
+  margin-right:-20px;
+}
+
+.mdl-layout-title {
+  margin-left: 40px;
+  color: black;
+  text-decoration: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background-color: transparent;
+  padding: 10px;
+}
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu-item {
+  position: relative;
+}
+
+.menu-item a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  display: block;
+}
+
+.menu-item:hover {
+  background-color: black;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: transparent;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-menu li a {
+  padding: 12px 16px;
+}
+
+.dropdown-menu li a:hover {
+  background-color: black;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+
+/* Basis-Layout */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Ermöglicht das Umfließen von Elementen */
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.item {
+  flex: 1 1 200px; /* Elemente passen sich flexibel an */
+  margin: 10px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Beispiel für ein Layout mit Bildern */
+img {
+  width: 100%; /* Bilder passen sich an */
+  height: auto;
+}
+
+
+
+/* Für Geräte mit einer maximalen Breite von 768px (z.B. Tablets) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Ändert das Layout in eine vertikale Richtung */
+    align-items: center; /* Zentriert die Elemente */
+  }
+
+  .item {
+    margin: 10px 0; /* Verändert den Abstand zwischen den Elementen */
+  }
+}
+
+/* Für Geräte mit einer maximalen Breite von 480px (z.B. Smartphones) */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px; /* Verkleinert die Schriftgröße */
+  }
+
+  .item {
+    flex: 1 1 100%; /* Items nehmen die volle Breite des Containers ein */
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    flex-direction: row;
+  }
+}
+
+
+
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+
+
+/* Basis-Stile für beide Ansichten */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+#toggleView {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+#toggleView:hover {
+  background-color: #45a049;
+}
+
+/* Mobile-Ansicht (Standard) */
+.mobile-view {
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.desktop-view {
+  display: none;
+  background-color: #e0e0e0;
+  text-align: left;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 18px;
+}
+
+/* Für größere Bildschirme (Desktop) */
+@media (min-width: 768px) {
+  .mobile-view {
+    display: block; /* Mobile Ansicht auf größeren Bildschirmen ausblenden */
+  }
+
+  .desktop-view {
+    display: block; /* Desktop Ansicht anzeigen */
+  }
+}
+
+  .road-item {
+    color: white;
+    text-decoration: none;
+    margin-top: 14px;
+  }
+
+  .road-item:hover {
+    background-color: black;
+    border: 10px;
+  }
+
+
+  .MENU0 {
+    font-weight: 800;
+    font-size: larger;
+    margin-left: 40px;
+    color: black;
+    text-decoration: none;
+    cursor: default;
+  }
+
+
+  .U1 {
+    background-color: black;
+  }
+
+/* Standard-Schriftgröße */
+.Holokaan-Schrift {
+  width: 2000px;
+  height: auto;
+}
+
+/* Für Mobilgeräte mit einer Breite von maximal 768px */
+@media (max-width: 768px) {
+  .Holokaan-Schrift {
+    max-width: 100%; /* Bild füllt mehr Platz aus */
+  }
+}
+
+/* Für sehr kleine Bildschirme (z. B. Smartphones) mit einer Breite von maximal 480px */
+@media (max-width: 480px) {
+  .Holokaan-Schrift {
+    max-width: 120%; /* Noch größere Darstellung */
+  }
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Verhindert Scrollbars */
+  position: relative; /* Referenzrahmen für absolute Positionierungen */
+}
+
+  .Holokaan-Box {
+  position: absolute; /* Für absolute Platzierung */
+  top: 70%; /* Vertikale Mitte */
+  left: 50%; /* Horizontale Mitte */
+  transform: translate(-50%, -50%); /* Zentrieren basierend auf der Mitte */
+  display: flex; /* Optional: Flexbox für weitere Zentrierungsoptionen */
+  justify-content: center; /* Horizontale Zentrierung */
+  align-items: center; /* Vertikale Zentrierung */
+}
+
+.holokaan-herz {
+  width: 200px;
+  height: 190px;
+  position: absolute;
+  object-fit: contain;
+  align-content: center;
+  margin-left: 15%;
+  margin-top: -2%;
+}
+
+.GUITAR {
+  position: absolute;
+  font-weight: 600;
+  font-size: 20px;
+  margin-left: 65%;
+  color: white;
+  margin-top: 35%;
+}
+
+.GUITAR1 {
+  width: 50px;
+  height: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .YT-LOGO {
+    width: 100px;
+    height: 70px;
+  }
+}
+  </style>
+  
+  <script>
+    // Funktion zum Umschalten der Ansichten
+function toggleView() {
+  var content = document.getElementById("content");
+
+  // Wenn die mobile Ansicht angezeigt wird, auf Desktop-Ansicht umschalten
+  if (content.classList.contains("mobile-view")) {
+    content.classList.remove("mobile-view");
+    content.classList.add("desktop-view");
+  } else {
+    // Wenn die Desktop-Ansicht angezeigt wird, auf mobile Ansicht umschalten
+    content.classList.remove("desktop-view");
+    content.classList.add("mobile-view");
+  }
+}
+
+// Funktion zur Überprüfung der Fenstergröße und zum automatischen Umschalten
+window.addEventListener("resize", function() {
+  var content = document.getElementById("content");
+  
+  if (window.innerWidth >= 768) {
+    // Wenn der Bildschirm breiter als 768px ist, zeige die Desktop-Ansicht
+    content.classList.remove("mobile-view");
+    content.classList.add("desktop-view");
+  } else {
+    // Andernfalls zeige die Mobile-Ansicht
+    content.classList.remove("desktop-view");
+    content.classList.add("mobile-view");
+  }
+});
+
+  </script>
+  <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header mdl-layout__header--transparent">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">HOLOKAAN</span>
+
+        <div class="social-buttons">
+          <a href="https://www.youtube.com/@holokaan">
+            <img class="YT-LOGO" src="img/yt-6273367_1280.webp" alt="YouTube">
+          </a>
+          <a href="https://www.instagram.com/holokaan/">
+            <img class="INSTAGRAM-LOGO" src="img/instagram-logo-instagram-icon-transparent-free-png.webp" alt="Instagram">
+          </a>
+        </div>
+        
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation -->
+        <nav class="navbar">
+          <ul class="menu">
+            <li class="menu-item dropdown">
+              <a href="about.html" class="dropdown-btn">ABOUT</a>
+            </li>
+
+            <li class="menu-item dropdown">
+              <a href="road.html" class="dropdown-btn">ROAD</a>
+            </li>
+            <li class="menu-item dropdown">
+              <a href="organizer-content.html" class="dropdown-btn">FOR ORGANIZERS</a>
+            </li>
+            <li class="menu-item dropdown">
+              <a href="https://opensea.io/de-DE/HOLOKAAN" class="dropdown-btn">NFT</a>
+            </li>
+            <li class="menu-item dropdown">
+              <a href="mailto:holokaan@mail.de?subject=Betreff&body=Nachrichtentext" class="dropdown-btn">E-Mail an HOLOKAAN! Über holokaan@mail.de
+            </li>
+</body>
+</html>
+
+
+          </ul>
+        </nav>
+      
+        <script src="nav.js"></script>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">MAIL US</span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="WALDEMAR_LELL.html">WALDEMAR LELL BAND-LEADER</a>
+        <a class="mdl-navigation__link" href="ANDY.ITALO.SCHULZ.html">ANDY.ITALO.SCHULZ</a>
+        <a class="mdl-navigation__link" href="GERRY.html">GERRY LUPPOLO</a>
+        <a class="mdl-navigation__link" href="MAT GREGORY.html">MAT GREGORY</a>
+        <a class="mdl-navigation__link" href="GAETANO CAPPUCCIO.html">GAETANO CAPPUCCIO</a>
+        <a class="mdl-navigation__link" href="Constix.html">CONSTIX</a><br><a class="MENU0" href="#">MENU</a><br>
+        <a class="mdl-navigation__link" href="about.html" class="dropdown-btn">ABOUT</a>
+          <a class="mdl-navigation__link" href="road.html">ROAD</a>
+        <a class="mdl-navigation__link" href="organizer-content.html">FOR ORGANIZERS</a>
+        <a class="mdl-navigation__link" href="merch.html">NFT</a>
+        <a class="mdl-navigation__link" href="https://www.youtube.com/@holokaan">YOUTUBE</a>
+        <a class="mdl-navigation__link" href="https://www.instagram.com/holokaan/">INSTAGRAM</a>
+      </nav>
+    </div>
+    <main class="mdl-layout__content">
+    </main>
+  </div>
+
+
+  <video class="Video-Background" src="Videos/Video.Guru_20241201_082213070 (1).mp4" autoplay loop muted></video>
+  <audio src="sounds/Just In Japan.mp3" autoplay loop></audio>
+  <audio src="sounds/downfall-3-208028.mp3" autoplay></audio>
+  <div class="Holokaan-Box">
+    <img class="Holokaan-Schrift" src="img/Visite Holokaan letters.png" alt="Holokaan Schrift">
+  </div>
+  
+
+
+  <style>
+    /* Basis-Styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    /* Fullscreen-Video */
+    #video-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    /* Zähler-Overlay */
+    .counter-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background: rgba(0, 0, 0, 0.5); /* Halbtransparenter Hintergrund */
+      padding: 20px 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .counter-overlay h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+
+  .sevenseven {
+    width: 200px;
+    height: 200px;
+    z-index: +2;
+  }
+  </style>
+</head>
+<body>
+  <!-- Video-Hintergrund -->
+  <video id="video-background" autoplay muted loop>
+    <source src="dein-video.mp4" type="video/mp4">
+    Dein Browser unterstützt kein HTML5-Video.
+  </video>
+
+  <!-- Zähler-Overlay -->
+  <div class="counter-overlay">
+    <h1>Seitenaufrufe: <span id="counter">0</span></h1>
+
+
+  </div>
+
+  <script>
+    // Lade den Zählerwert aus localStorage oder starte bei 0
+    let counter = parseInt(localStorage.getItem("counter")) || 0;
+
+    // HTML-Elemente
+    const counterElement = document.getElementById("counter");
+
+    // Aktualisiere den Zähler in der Anzeige
+    function updateCounter() {
+      counter++;
+      counterElement.textContent = counter;
+      localStorage.setItem("counter", counter); // Speichere den neuen Wert
+    }
+
+    // Erhöhe den Zähler, wenn die Seite geladen wird
+    updateCounter();
+
+    // Zurücksetzen des Zählers
+
+
+  </script>
+
+  <img src="img/77_herz_holokaan_0.png" class="sevenseven">
+  
+  <div class="GUITAR1">
+  <p class="GUITAR">
+    
+  </p>
+</div>
+
+</body>
+
+</html>

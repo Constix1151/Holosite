@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROAD</title>
+  <link rel="icon" type="image/x-icon" href="img/77_herz_holokaan_0.png">
+
+  <style>
+    body {
+      background-color: black;
+      margin: 0;
+      padding: 0;
+    }
+
+    .roaddiv {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 columns by default */
+      gap: 20px;
+      padding: 20px;
+      justify-items: center;
+    }
+
+    .ROAD1, .ROAD2, .ROAD3, .ROAD4 {
+      width: 100%;
+      max-width: 800px; /* Limit the max width of videos */
+      height: auto; /* Keep aspect ratio intact */
+    }
+
+    /* Media queries for responsive design */
+    @media (max-width: 768px) {
+      .roaddiv {
+        grid-template-columns: 1fr; /* Stack videos vertically on smaller screens */
+      }
+
+      .ROAD1, .ROAD2, .ROAD3, .ROAD4 {
+        max-width: 100%; /* Allow videos to take full width of screen */
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="roaddiv">
+    <video class="ROAD1" src="Videos/ROAD (1).mp4" controls autoplay loop></video>
+    <video class="ROAD2" src="Videos/ROAD (2).mp4" controls autoplay loop></video>
+    <video class="ROAD3" src="Videos/ROAD (3).mp4" controls autoplay loop></video>
+    <video class="ROAD4" src="Videos/ROAD (4).mp4" controls autoplay loop></video>
+  </div>
+</body>
+
+</html>
